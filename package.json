@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mojs/core": "^1.7.1",
     "@radix-ui/react-slot": "^1.2.3",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
@@ -19,6 +20,7 @@
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
     "lucide-react": "^0.544.0",
+    "motion": "^12.23.22",
     "next": "13.5.1",
     "postcss": "8.4.30",
     "react": "18.2.0",

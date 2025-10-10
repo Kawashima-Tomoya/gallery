@@ -15,8 +15,8 @@ const Montserrat700 = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: '今日のAI占い',
-  description: 'AIを使用した辛口占いサービス',
+  title: '川島作品集',
+  description: '職業訓練作品をまとめたページ',
 };
 
 export default function RootLayout({
