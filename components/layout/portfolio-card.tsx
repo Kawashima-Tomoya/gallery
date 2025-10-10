@@ -169,7 +169,7 @@ export function PortfolioCard({
         )}
 
         {/* Lightning effect on hover */}
-        <motion.div
+        {/* <motion.div
           className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100"
           animate={{
             rotate: [0, 20, -20, 0],
@@ -183,7 +183,7 @@ export function PortfolioCard({
             className="w-10 h-10 text-[#FFD700]"
             fill="currentColor"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Content */}
