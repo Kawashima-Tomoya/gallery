@@ -12,7 +12,7 @@ interface CategoryFilterProps {
 
 const categories = [
   { id: 'all' as const, label: 'すべて', icon: Sparkles, color: '#9333EA' },
-  { id: 'website' as const, label: 'Webサイト', icon: Monitor, color: '#00FFFF' },
+  { id: 'website' as const, label: 'Webサイト', icon: Monitor, color: '#00CED1' },
   { id: 'design' as const, label: 'デザイン', icon: Palette, color: '#FF1493' },
   { id: 'video' as const, label: '動画', icon: Video, color: '#FFD700' },
 ];
@@ -79,11 +79,11 @@ export function CategoryFilter({ activeCategory, onCategoryChange }: CategoryFil
             } : {}}
             transition={{
               y: {
-                duration: 0.5,
+                duration: 1,
                 repeat: isActive ? Infinity : 0,
               },
               rotate: {
-                duration: 1,
+                duration: 2,
                 repeat: isActive ? Infinity : 0,
               }
             }}
@@ -94,7 +94,7 @@ export function CategoryFilter({ activeCategory, onCategoryChange }: CategoryFil
                   rotate: [0, 360]
                 } : {}}
                 transition={{
-                  duration: 2,
+                  duration: 3,
                   repeat: isActive ? Infinity : 0,
                   ease: "linear"
                 }}
@@ -111,14 +111,14 @@ export function CategoryFilter({ activeCategory, onCategoryChange }: CategoryFil
                   animate={{ 
                     scale: [1, 1.5, 1],
                   }}
-                  transition={{ duration: 0.5, repeat: Infinity }}
+                  transition={{ duration: 1, repeat: Infinity }}
                 />
                 <motion.div
                   className="absolute -bottom-2 -left-2 w-4 h-4 bg-black rounded-full"
                   animate={{ 
                     scale: [1, 1.5, 1],
                   }}
-                  transition={{ duration: 0.5, repeat: Infinity, delay: 0.25 }}
+                  transition={{ duration: 1, repeat: Infinity, delay: 0.5 }}
                 />
               </>
             )}

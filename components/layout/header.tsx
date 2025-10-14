@@ -46,64 +46,7 @@ export function Header() {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className="relative overflow-hidden bg-[#FF1493] py-16 px-6 border-b-8 border-black"
     >
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        {/* <div className="flex justify-center gap-4 mb-6">
-          <motion.div
-            animate={{ 
-              rotate: [0, 360],
-              scale: [1, 1.2, 1]
-            }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity,
-            }}
-            className="inline-block"
-          >
-            <Sparkles className="w-12 h-12 text-[#FFD700]" />
-          </motion.div>
-          
-          <motion.div
-            animate={{ 
-              rotate: [0, -360],
-              y: [0, -10, 0]
-            }}
-            transition={{ 
-              duration: 1.5,
-              repeat: Infinity,
-            }}
-            className="inline-block"
-          >
-            <Star className="w-12 h-12 text-[#00FFFF]" fill="currentColor" />
-          </motion.div>
-
-          <motion.div
-            animate={{ 
-              scale: [1, 1.3, 1],
-              rotate: [0, 20, -20, 0]
-            }}
-            transition={{ 
-              duration: 1,
-              repeat: Infinity,
-            }}
-            className="inline-block"
-          >
-            <Heart className="w-12 h-12 text-[#FFD700]" fill="currentColor" />
-          </motion.div>
-
-          <motion.div
-            animate={{ 
-              rotate: [0, 180, 360],
-            }}
-            transition={{ 
-              duration: 0.8,
-              repeat: Infinity,
-            }}
-            className="inline-block"
-          >
-            <Zap className="w-12 h-12 text-[#00FFFF]" fill="currentColor" />
-          </motion.div>
-        </div> */}
-        
+      <div className="max-w-6xl mx-auto text-center relative z-10">        
         <motion.h1
           className="text-2xl text-white mb-4 drop-shadow-[4px_4px_0_rgba(0,0,0,0.6)]"
           initial={{ scale: 0, rotate: -180 }}

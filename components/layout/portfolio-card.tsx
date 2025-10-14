@@ -6,7 +6,7 @@ import mojs from "@mojs/core";
 import { PortfolioItem } from "@/data/portfolio";
 
 const categoryColors = {
-  website: "#00FFFF",
+  website: "#00CED1",
   design: "#FF1493",
   video: "#FFD700",
 };
@@ -108,7 +108,7 @@ export function PortfolioCard({
 
         {/* Category badge */}
         <motion.div
-          className="absolute top-4 right-4 px-4 py-2 text-black border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
+          className="text-white absolute top-4 right-4 px-4 py-2 border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
           style={{
             backgroundColor:
               categoryColors[
@@ -125,24 +125,6 @@ export function PortfolioCard({
           {category === "design" && "🎨 Design"}
           {category === "video" && "🎬 Video"}
         </motion.div>
-
-        {/* Decorative stars */}
-        {/* <motion.div
-          className="absolute top-4 left-4"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-          }}
-        >
-          <Star
-            className="w-8 h-8 text-[#FFD700]"
-            fill="currentColor"
-          />
-        </motion.div> */}
 
         {/* Video play button for video category */}
         {category === "video" && (
@@ -167,23 +149,6 @@ export function PortfolioCard({
             </motion.div>
           </motion.div>
         )}
-
-        {/* Lightning effect on hover */}
-        {/* <motion.div
-          className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100"
-          animate={{
-            rotate: [0, 20, -20, 0],
-          }}
-          transition={{
-            duration: 0.5,
-            repeat: Infinity,
-          }}
-        >
-          <Zap
-            className="w-10 h-10 text-[#FFD700]"
-            fill="currentColor"
-          />
-        </motion.div> */}
       </div>
 
       {/* Content */}
