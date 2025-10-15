@@ -1,20 +1,13 @@
 import { motion } from "motion/react";
 import { ExternalLink, Play, Zap, Star } from "lucide-react";
 import { ImageFallback } from "@/components/ui/image-fallback";
-import { useEffect, useRef, useState } from "react";
-import mojs from "@mojs/core";
+import { useRef, useState } from "react";
 import { PortfolioItem } from "@/data/portfolio";
 
 const categoryColors = {
   website: "#00CED1",
   design: "#FF1493",
-  video: "#FFD700",
-};
-
-const categoryBg = {
-  website: "#7B68EE",
-  design: "#FF69B4",
-  video: "#00CED1",
+  video: "#FFD220",
 };
 
 export function PortfolioCard({
@@ -26,49 +19,12 @@ export function PortfolioCard({
   tags,
   link,
 }: PortfolioItem) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const burstRef = useRef<any>(null);
-  const [rotation, setRotation] = useState(
+  const [rotation] = useState(
     Math.random() * 6 - 3,
   );
 
-  useEffect(() => {
-    if (cardRef.current) {
-      burstRef.current = new mojs.Burst({
-        parent: cardRef.current,
-        radius: { 0: 150 },
-        count: 20,
-        children: {
-          shape: ["circle", "polygon", "zigzag", "rect"],
-          radius: { 15: 0 },
-          fill: [
-            "#FF1493",
-            "#FFD700",
-            "#00FFFF",
-            "#FF69B4",
-            "#7B68EE",
-            "#00CED1",
-          ],
-          duration: 1200,
-          delay: "stagger(0, 30)",
-        },
-      });
-    }
-  }, []);
-
-  const handleCardClick = (e: React.MouseEvent) => {
-    if (burstRef.current && cardRef.current) {
-      const rect = cardRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left*2;
-      const y = e.clientY - rect.top*2;
-
-      burstRef.current.tune({ x, y }).replay();
-    }
-  };
-
   return (
     <motion.div
-      ref={cardRef}
       initial={{ opacity: 0, y: 100, rotate: -10 }}
       animate={{ opacity: 1, y: 0, rotate: rotation }}
       exit={{ opacity: 0, scale: 0.5, rotate: -45 }}
@@ -84,16 +40,11 @@ export function PortfolioCard({
         scale: 1.05,
         transition: { duration: 0.3 },
       }}
-      onClick={handleCardClick}
       className="group relative bg-white overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-4 border-black cursor-pointer"
-      style={{
-        backgroundColor:
-          categoryBg[category as keyof typeof categoryBg] ||
-          "#9333EA",
-      }}
-    >
+      role="article"
+>
       {/* Image container */}
-      <div className="relative h-64 overflow-hidden border-b-4 border-black bg-gray-100">
+      <div className="relative h-64 overflow-hidden border-b-4 border-black bg-gray-100 ">
         <motion.div
           whileHover={{ scale: 1.2, rotate: 5 }}
           transition={{ duration: 0.4 }}
@@ -111,9 +62,9 @@ export function PortfolioCard({
           className="text-white absolute top-4 right-4 px-4 py-2 border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
           style={{
             backgroundColor:
-              categoryColors[
-                category as keyof typeof categoryColors
-              ] || "#9333EA",
+              categoryColors[category as keyof typeof categoryColors] ||
+              "#9333EA",
+            textShadow: "2px 2px 1px rgba(0, 0, 0, 0.5)",
           }}
           whileHover={{
             rotate: [0, -15, 15, -15, 15, 0],
@@ -194,10 +145,10 @@ export function PortfolioCard({
             whileHover={{
               x: 8,
               y: -4,
-              boxShadow: "6px_6px_0_0_rgba(255,215,0,1)",
+              boxShadow: "6px 6px 0 0 rgba(255,215,0,1)",
             }}
             whileTap={{
-              boxShadow: "2px_2px_0_0_rgba(255,215,0,1)",
+              boxShadow: "2px 2px 0 0 rgba(255,215,0,1)",
             }}
             onClick={(e) => e.stopPropagation()}
           >
