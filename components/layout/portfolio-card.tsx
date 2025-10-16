@@ -68,10 +68,6 @@ export function PortfolioCard({
               "#9333EA",
             textShadow: "2px 2px 1px rgba(0, 0, 0, 0.5)",
           }}
-          whileHover={{
-            rotate: [0, -15, 15, -15, 15, 0],
-            scale: 1.2,
-          }}
           transition={{ duration: 0.5 }}
         >
           {category === "website" && "💻 Web"}
@@ -107,7 +103,7 @@ export function PortfolioCard({
       {/* Content */}
       <div className="p-6 bg-white">
         <motion.h3
-          className="mb-3 text-black drop-shadow-[2px_2px_0_rgba(255,215,0,0.3)]"
+          className="mb-3 text-black drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
           whileHover={{ x: 10, scale: 1.05 }}
         >
           {title}
