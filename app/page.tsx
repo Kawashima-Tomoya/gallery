@@ -1,13 +1,26 @@
 "use client"
 
-import { CategoryFilter, CategoryType } from "@/components/layout/category-filter";
-import { FloatingShapes } from "@/components/layout/floating-shapes"
-import { Header } from "@/components/layout/header"
+import dynamic from 'next/dynamic'
 import { PortfolioCard } from "@/components/layout/portfolio-card";
 import { PortfolioItems } from "@/data/portfolio";
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from "react";
+import type { CategoryType } from "@/components/layout/category-filter";
 
+const CategoryFilter = dynamic(
+  () => import("@/components/layout/category-filter").then(mod => ({ default: mod.CategoryFilter })),
+  { ssr: false }
+)
+
+const FloatingShapes = dynamic(
+  () => import("@/components/layout/floating-shapes").then(mod => ({ default: mod.FloatingShapes })),
+  { ssr: false }
+)
+
+const Header = dynamic(
+  () => import("@/components/layout/header").then(mod => ({ default: mod.Header })),
+  { ssr: false }
+)
 
 export default function Page() {
 

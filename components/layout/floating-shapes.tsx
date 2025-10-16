@@ -12,7 +12,6 @@ export function FloatingShapes() {
 
     const shapes: any[] = [];
 
-    // Create more dynamic mo.js shapes
     for (let i = 0; i < 8; i++) {
       const shape = new mojs.Shape({
         parent: containerRef.current,
