@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "motion/react";
 import { ExternalLink, Play, Zap, Star } from "lucide-react";
 import { ImageFallback } from "@/components/ui/image-fallback";

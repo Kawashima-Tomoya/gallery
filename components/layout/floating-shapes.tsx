@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import mojs from '@mojs/core';

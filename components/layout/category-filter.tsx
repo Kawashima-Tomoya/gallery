@@ -1,3 +1,4 @@
+"use client"
 import { motion } from 'motion/react';
 import { Monitor, Palette, Video, Sparkles } from 'lucide-react';
 import { useEffect, useRef } from 'react';

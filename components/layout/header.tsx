@@ -1,5 +1,6 @@
+"use client"
+
 import { motion } from 'motion/react';
-import { Sparkles, Star, Heart, Zap } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import mojs from '@mojs/core';
 
