@@ -150,7 +150,7 @@ export function PortfolioCard({
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            詳しく見る
+            サイトへ移動
             <ExternalLink className="w-4 h-4" />
           </motion.a>
         )}
