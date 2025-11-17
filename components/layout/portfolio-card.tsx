@@ -45,7 +45,6 @@ export function PortfolioCard({
       className="group relative bg-white overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,1)] border-4 border-black cursor-pointer"
       role="article"
 >
-      {/* Image container */}
       <a
         href={link}
         target="_blank"
@@ -65,7 +64,6 @@ export function PortfolioCard({
           />
         </motion.div>
 
-        {/* Category badge */}
         <motion.div
           className="text-white absolute top-4 right-4 px-4 py-2 border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
           style={{
@@ -81,7 +79,6 @@ export function PortfolioCard({
           {category === "video" && "🎬 Video"}
         </motion.div>
 
-        {/* Video play button for video category */}
         {category === "video" && (
           <motion.div
             className="absolute inset-0 flex items-center justify-center"
@@ -106,7 +103,6 @@ export function PortfolioCard({
         )}
       </a>
 
-      {/* Content */}
       <div className="p-6 bg-white">
         <motion.h3
           className="mb-3 text-black drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
@@ -117,7 +113,6 @@ export function PortfolioCard({
 
         <p className="text-gray-700 mb-4">{description}</p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, i) => (
             <motion.span
@@ -139,7 +134,6 @@ export function PortfolioCard({
           ))}
         </div>
 
-        {/* Link button */}
         {link && (
           <motion.a
             href={link}
@@ -162,7 +156,6 @@ export function PortfolioCard({
         )}
       </div>
 
-      {/* Decorative dots */}
       <div className="absolute -top-3 -left-3 w-6 h-6 bg-black rounded-full border-2 border-black" />
       <div className="absolute -top-3 -right-3 w-6 h-6 bg-black rounded-full border-2 border-black" />
       <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-black rounded-full border-2 border-black" />
