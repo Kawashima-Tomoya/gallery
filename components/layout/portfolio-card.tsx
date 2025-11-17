@@ -46,7 +46,13 @@ export function PortfolioCard({
       role="article"
 >
       {/* Image container */}
-      <div className="relative h-64 overflow-hidden border-b-4 border-black bg-gray-100 ">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative h-64 overflow-hidden border-b-4 border-black bg-gray-100 block"
+        onClick={(e) => e.stopPropagation()}
+      >
         <motion.div
           whileHover={{ scale: 1.2, rotate: 5 }}
           transition={{ duration: 0.4 }}
@@ -98,7 +104,7 @@ export function PortfolioCard({
             </motion.div>
           </motion.div>
         )}
-      </div>
+      </a>
 
       {/* Content */}
       <div className="p-6 bg-white">
